@@ -201,7 +201,7 @@ const Checkout = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/order/orderRoute",
+        "https://ecommercebackend-r7u5.onrender.com/api/order/orderRoute",
         {
           orderItems,
           totalPrice: calculateTotal(),

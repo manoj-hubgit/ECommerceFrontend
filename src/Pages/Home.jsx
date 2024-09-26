@@ -264,7 +264,7 @@ const Home = () => {
   const fetchData = async () => {
     setLoading(true);
     await axios
-      .get("http://localhost:5000/api/products/getProducts", {
+      .get("https://ecommercebackend-r7u5.onrender.com/api/products/getProducts", {
         params: { search, category },
       })
       .then((res) => {

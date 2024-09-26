@@ -32,7 +32,7 @@ const AddProduct = () => {
     e.preventDefault();
     try {
       await axios
-        .post("http://localhost:5000/api/products/addProduct", productData)
+        .post("https://ecommercebackend-r7u5.onrender.com/api/products/addProduct", productData)
         .then((res) => {
           console.log(res.data.message);
         });

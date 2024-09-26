@@ -18,7 +18,7 @@ const Login = () => {
         e.preventDefault();
         dispatch(signInStart());
         try {
-            const response = await axios.post("http://localhost:5000/api/auth/login", formData);
+            const response = await axios.post("https://ecommercebackend-r7u5.onrender.com/api/auth/login", formData);
             const { token } = response.data;
             dispatch(signInSuccess({ token }));
             localStorage.setItem("token", token);
