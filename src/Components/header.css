@@ -1,0 +1,11 @@
+.noOfItemInCart{
+    border-radius: 50%;
+    font-size: small;
+    padding:0.05rem 0.4rem;
+    background-color: black;
+}
+
+.brandName{
+    text-decoration: none;
+    color: rgb(24, 24, 24);
+}
