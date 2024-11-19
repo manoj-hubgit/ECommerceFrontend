@@ -16,7 +16,7 @@ const Register = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            await axios.post("https://ecommercebackend-r7u5.onrender.com/api/auth/register", formData);
+            await axios.post("http://localhost:5000/api/auth/register", formData);
             navigate('/login'); 
         } catch (error) {
             setError(error.response?.data.message || 'Failed to register');

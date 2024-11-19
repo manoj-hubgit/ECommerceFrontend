@@ -20,7 +20,7 @@ const Home = () => {
   const fetchData = async () => {
     setLoading(true);
     await axios
-      .get("https://ecommercebackend-r7u5.onrender.com/api/products/getProducts", {
+      .get("http://localhost:5000/api/products/getProducts", {
         params: { search, category },
       })
       .then((res) => {
@@ -40,7 +40,7 @@ const Home = () => {
       navigate("/login");
       return;
     }
-    await axios.post("https://ecommercebackend-r7u5.onrender.com/api/cart/addCart",{productId: product._id, quantity: 1 },
+    await axios.post("http://localhost:5000/api/cart/addCart",{productId: product._id, quantity: 1 },
       {headers:
         {Authorization:token,
       }

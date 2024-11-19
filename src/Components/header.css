@@ -9,3 +9,22 @@
     text-decoration: none;
     color: rgb(24, 24, 24);
 }
+
+.custom-category {
+    width: 150px; /* Maintain your desired width */
+  }
+  
+  .custom-search {
+    width: 300px; /* Maintain your desired width */
+  }
+  
+  .navbar-nav .btn {
+    margin: 0.5rem 0;
+  }
+  
+  @media (max-width: 992px) {
+    .navbar-toggler {
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  

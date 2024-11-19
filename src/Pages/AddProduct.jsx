@@ -38,7 +38,7 @@ const AddProduct = () => {
     const token = localStorage.getItem("token");
     try {
       await axios
-        .post("https://ecommercebackend-r7u5.onrender.com/api/products/addProduct", productData, {
+        .post("http://localhost:5000/api/products/addProduct", productData, {
           headers: {
             Authorization: token,
           },

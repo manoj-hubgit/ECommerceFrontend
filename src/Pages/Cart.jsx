@@ -21,7 +21,7 @@ useEffect(() => {
   const fetchData=async ()=>{
     try {
       const token= localStorage.getItem("token")
-      const response=await axios.get("https://ecommercebackend-r7u5.onrender.com/api/cart/getCart",
+      const response=await axios.get("http://localhost:5000/api/cart/getCart",
         {
           headers: { Authorization: token }, 
     });

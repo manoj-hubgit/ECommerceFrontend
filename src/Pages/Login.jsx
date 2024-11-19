@@ -23,7 +23,7 @@ const Login = () => {
     dispatch(signInStart());
     try {
       const response = await axios.post(
-        "https://ecommercebackend-r7u5.onrender.com/api/auth/login",
+        "http://localhost:5000/api/auth/login",
         formData
       );
       const { token,isAdmin } = response.data;

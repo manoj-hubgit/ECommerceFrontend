@@ -49,7 +49,7 @@ const Checkout = () => {
     try {
       const token=localStorage.getItem("token")
       const response = await axios.post(
-        "https://ecommercebackend-r7u5.onrender.com/api/order/orderRoute",
+        "http://localhost:5000/api/order/orderRoute",
         {
           orderItems,
           totalPrice: totalAmount,
@@ -88,7 +88,6 @@ const Checkout = () => {
           <h2 className="mb-4">Your Items</h2>
           {items.map((element) => {
             const product =element.productId;
-            // if(!product) return null;
             return(
             <div className="card mb-3" key={product._id}>
               <div className="card-body">
