@@ -1,6 +1,6 @@
 .cart-image {
-    width: 100%; /* Set a fixed width */
-    height: auto; /* Ensure the aspect ratio is maintained */
+    width: 100%; 
+    height: auto; 
     padding-bottom: 0%;
   }
 

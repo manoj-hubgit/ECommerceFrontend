@@ -21,7 +21,7 @@ useEffect(() => {
   const fetchData=async ()=>{
     try {
       const token= localStorage.getItem("token")
-      const response=await axios.get("http://localhost:5000/api/cart/getCart",
+      const response=await axios.get("https://ecommercebackend-r7u5.onrender.com/api/cart/getCart",
         {
           headers: { Authorization: token }, 
     });
@@ -40,7 +40,7 @@ useEffect(() => {
       const token= localStorage.getItem("token")
       const productId=item._id;
       console.log("the product Id id: ", productId)
-     await axios.delete(`http://localhost:5000/api/cart/deleteCart/${productId}`,{
+     await axios.delete(`https://ecommercebackend-r7u5.onrender.com/api/cart/deleteCart/${productId}`,{
       headers: { Authorization: token }
     })
     
@@ -53,7 +53,7 @@ useEffect(() => {
   const handleClearCart = async() => {
     try {
       const token= localStorage.getItem("token")
-      await axios.delete("http://localhost:5000/api/cart/clearCart",{
+      await axios.delete("https://ecommercebackend-r7u5.onrender.com/api/cart/clearCart",{
         headers: { Authorization: token }
       });
       dispatch(clearCart());
@@ -67,7 +67,7 @@ useEffect(() => {
     try {
       const token = localStorage.getItem("token");
       const newQuantity=currentQuantity+1;
-      await axios.put("http://localhost:5000/api/cart/updateQuantity",{
+      await axios.put("https://ecommercebackend-r7u5.onrender.com/api/cart/updateQuantity",{
         productId,
         quantity:newQuantity,
       },{
@@ -83,7 +83,7 @@ if(currentQuantity>1){
   try {
     const token = localStorage.getItem("token");
     const newQuantity=currentQuantity -1;
-    await axios.put("http://localhost:5000/api/cart/updateQuantity",{
+    await axios.put("https://ecommercebackend-r7u5.onrender.com/api/cart/updateQuantity",{
       productId,
       quantity:newQuantity,
     },{

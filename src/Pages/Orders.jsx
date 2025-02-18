@@ -13,7 +13,7 @@ const Orders = () => {
   const fetchOrders = async () => {
     const token=localStorage.getItem("token");
     try {
-      const response = await axios.get("http://localhost:5000/api/order/orderDisplay",{
+      const response = await axios.get("https://ecommercebackend-r7u5.onrender.com/api/order/orderDisplay",{
         headers:{
             Authorization:token
         }
@@ -29,7 +29,7 @@ const Orders = () => {
   const handlePackOrder = async (orderId) => {
     try {
       const updatedOrder = await axios.put(
-        `http://localhost:5000/api/order/packedStatus/${orderId}`
+        `https://ecommercebackend-r7u5.onrender.com/api/order/packedStatus/${orderId}`
       );
       setOrders((prevOrders) =>
         prevOrders.map((order) =>
