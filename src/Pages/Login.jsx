@@ -39,6 +39,8 @@ const Login = () => {
 
   return (
     <div className="container">
+      <h2 className="text-danger">To login as Admin use Email: manoj@gmail.com</h2>
+      <h2 className="text-danger">password : 123456</h2>
       <h1 className="text-center mt-5">Login to Your Account</h1>
       <button onClick={()=>navigate("/home")} className="btn btn-primary">Home</button>
       <form onSubmit={handleSubmit} className="mt-4">
