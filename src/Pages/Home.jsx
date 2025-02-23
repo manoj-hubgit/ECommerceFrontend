@@ -56,10 +56,37 @@ const Home = () => {
     });
   };
 
+  // const handleBuyNow = (product) => {
+  //   dispatch(addToCart(product));
+  //   navigate("/checkout");
+  // };
+
+  // const handleBuyNow = async (product) => {
+  //   const token = localStorage.getItem("token");
+  //   if (!token) {
+  //     navigate("/login");
+  //     return;
+  //   }
+  
+  //   try {
+  //     const res = await axios.post(
+  //       "https://ecommercebackend-r7u5.onrender.com/api/cart/addCart",
+  //       { productId: product._id, quantity: 1 },
+  //       { headers: { Authorization: token } }
+  //     );
+  
+  //     dispatch(addToCart(res.data.cart)); // Sync with Redux store
+  //     navigate("/checkout");
+  //   } catch (err) {
+  //     console.log(err);
+  //     alert("Error processing order");
+  //   }
+  // };
+  
   const handleBuyNow = (product) => {
-    dispatch(addToCart(product));
-    navigate("/checkout");
+    navigate("/buynow", { state: { product } });
   };
+  
 
   return (
     <div>
@@ -96,12 +123,17 @@ const Home = () => {
                     >
                       <IoIosAddCircle /> Cart
                     </button>
-                    <button
+                    {/* <button
                       className="btn btn-success"
                       onClick={() => handleBuyNow(element)}
                     >
                       Buy Now
-                    </button>
+                    </button> */}
+
+<button className="btn btn-success" onClick={() => handleBuyNow(element)}>
+  Buy Now
+</button>
+
                   </div>
                 </div>
               </div>

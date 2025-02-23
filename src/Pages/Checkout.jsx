@@ -88,6 +88,7 @@ const Checkout = () => {
           <h2 className="mb-4">Your Items</h2>
           {items.map((element) => {
             const product =element.productId;
+            
             return(
             <div className="card mb-3" key={product._id}>
               <div className="card-body">

@@ -10,6 +10,7 @@ import PrivateRoute from "./Pages/PrivateRoute";
 import Header from "./Components/Header";
 import AdminRoute from "./Pages/AdminRoute";
 import Orders from "./Pages/Orders";
+import BuyNow from "./Pages/BuyNow";
 
 const App = () => {
   return (
@@ -31,6 +32,14 @@ const App = () => {
           element={
             <PrivateRoute>
               <Cart />
+            </PrivateRoute>
+          }
+        />
+          <Route
+          path="/buynow"
+          element={
+            <PrivateRoute>
+             <BuyNow/>
             </PrivateRoute>
           }
         />

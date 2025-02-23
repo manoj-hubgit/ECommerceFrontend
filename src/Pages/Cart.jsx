@@ -97,6 +97,12 @@ if(currentQuantity>1){
     dispatch(decreaseQuantity(productId));
   }
 
+  const handleBuyNow = async () => {
+    await fetchData(); // Ensure cart is updated
+    navigate("/checkout");
+  };
+  
+
   return (
     <div className="container mt-5">
       <h1 className="text-center">Your Cart</h1>
@@ -151,12 +157,16 @@ if(currentQuantity>1){
             <button className="btn btn-warning" onClick={handleClearCart}>
               Clear Cart
             </button>
-            <button
+            {/* <button
               className="btn btn-success ms-2"
               onClick={() => navigate("/checkout")}
             >
               Buy Now
-            </button>
+            </button> */}
+            <button className="btn btn-success ms-2" onClick={handleBuyNow}>
+  Buy Now
+</button>
+
           </div>
         </div>
       )
